@@ -1,0 +1,51 @@
+{% extends "core/base.html" %}
+
+{% block title %}Acerca de{% endblock %}
+
+{% block background %}{% load static %}{% static 'core/img/About-bg.jpg' %}{% endblock %}
+
+
+{% block headers %}
+   <h1>Acerca de</h1>
+   <span class="subheading">Mi Experiencia Profesional</span>
+{% endblock %}
+
+{% block content %}
+<div class="row"> 
+     <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
+     <p align="justify"><ul>
+        <li><strong>F. Nacimiento 29/06/1984</strong></li>
+        <li><strong>Movil</strong> +34658597949</li>
+        <li><strong>Español:</strong>Nativo</li>
+        <li><strong>Inglés :</strong> Básico</li>
+        </br>
+        <li><strong>Hobbies</strong> - Practicar deporte,nadar y tocar la guitarra</li>
+     </p></ul>
+     </br>
+     <p><strong>Habilidades Personales</strong></p>
+     </br>
+    <img class="img" src="{% static 'core/img/habilidades-personales.jpg' %}" alt="">
+     </div>
+     <div class="col-lg-7 col-md-8">
+          <h2 class="section-heading">Jorge Diaz Dorta</h2>
+          <p align="justify">Aunque me gustaría tomarme un café, y hablar sobre mi experiencia... mientras puede leer algunas a continuación.</p>
+          </br> 
+          <p><strong>2012 DP CONINGPLAN</strong></p>
+          <p align="justify">Desarrollar características de los nuevos modelos de plantas de concreto, imagen, redes sociales y desarrollo de paginas webs de cada producto y subproducto de la empresa</p>
+          <p><strong>2014 Piuart ( Freelance )</strong></p>
+          <p align="justify">He trabajado para empresas y particulares que necsitaban refrescar su imagen y adaptarlas a las nuevas tecnologías</p>
+          <p align="justify"><strong>Empresas como:</strong> Rodelca-(Venezuela), La roca producciones-(Venezuela), MDB_(México), Inmetal C.A.-(Venezuela), SAMBIL-(Venezuela),
+          Miami Viajes-(Miami), Vive La Música-(México), Aicon Elevadores-(España), Ad La Costera-(España), MGF-(Argentina)</p>
+          <p><strong>2016 Panasaurios </strong></p>
+          <p align="justify">En Panasaurios C.A. , cumplí con una de las tareas más difíciles y a su vez gratificantes, dado que 
+          los proyectos de las empresas también iban vinculados con nuestra revista de temas variados con publicación bimensual
+          , nuestra idea era conectar a las empersas con publicidad e impactar a los eventos en donde Panasaurios como medio digital
+          se abría cada vez más espacio y lograr la distrubución a nivel nacional.
+          </p>
+          <p><strong>2018/2020 Pixelteam </strong></p>
+          <p align="justify">Actualmente desempeñando como programador Full Stack y producción de desarrollo o soluciones para empresas.
+          </p>
+     </div>
+</div>
+{% endblock %}
