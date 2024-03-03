@@ -1,51 +1,53 @@
 {% extends "core/base.html" %}
-
+{% load static %}
 {% block title %}Acerca de{% endblock %}
 
-{% block background %}{% load static %}{% static 'core/img/About-bg.jpg' %}{% endblock %}
-
-
-{% block headers %}
-   <h1>Acerca de</h1>
-   <span class="subheading">Mi Experiencia Profesional</span>
-{% endblock %}
+{% block navbar %}navbar  navbar-fixed-top navbar-default{% endblock %}
 
 {% block content %}
-<div class="row"> 
-     <div class="col-lg-3 col-md-4 offset-lg-1">
-          <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg' %}" alt="">
-     <p align="justify"><ul>
-        <li><strong>F. Nacimiento 29/06/1984</strong></li>
-        <li><strong>Movil</strong> +34658597949</li>
-        <li><strong>Español:</strong>Nativo</li>
-        <li><strong>Inglés :</strong> Básico</li>
-        </br>
-        <li><strong>Hobbies</strong> - Practicar deporte,nadar y tocar la guitarra</li>
-     </p></ul>
-     </br>
-     <p><strong>Habilidades Personales</strong></p>
-     </br>
-    <img class="img" src="{% static 'core/img/habilidades-personales.jpg' %}" alt="">
+<div class="section-container">
+     <div class="container">
+       <div class="row">
+         <div class="col-xs-12">
+           <div class="section-container-spacer text-center">
+             <h1 class="h2">03 : About me</h1>
+           </div>
+           <div class="row">
+             <div class="col-md-10 col-md-offset-1">
+               <div class="row">
+                 <div class="col-xs-12 col-md-6">
+                   <h3>Consectetur adipiscing elit</h3>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luctus at sem quis varius. 
+                   Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras ultrices hendrerit nisl.</p>
+                   <h3>Ut enim ad minim </h3>
+                   <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                   <h3>Maecenas luctus at sem quis varius</h3>
+                   <p>
+                   Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus iaculis magna sagittis elit sagittis, at hendrerit lorem venenatis. Morbi accumsan iaculis blandit. Cras ultrices hendrerit nisl.</p>
+                 </div>
+                 <div class="col-xs-12 col-md-6">
+                   <img src="{% static 'core/img/profil.jpg' %}" class="img-responsive" alt="">
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+           
+        </div>
+       </div>
      </div>
-     <div class="col-lg-7 col-md-8">
-          <h2 class="section-heading">Jorge Diaz Dorta</h2>
-          <p align="justify">Aunque me gustaría tomarme un café, y hablar sobre mi experiencia... mientras puede leer algunas a continuación.</p>
-          </br> 
-          <p><strong>2012 DP CONINGPLAN</strong></p>
-          <p align="justify">Desarrollar características de los nuevos modelos de plantas de concreto, imagen, redes sociales y desarrollo de paginas webs de cada producto y subproducto de la empresa</p>
-          <p><strong>2014 Piuart ( Freelance )</strong></p>
-          <p align="justify">He trabajado para empresas y particulares que necsitaban refrescar su imagen y adaptarlas a las nuevas tecnologías</p>
-          <p align="justify"><strong>Empresas como:</strong> Rodelca-(Venezuela), La roca producciones-(Venezuela), MDB_(México), Inmetal C.A.-(Venezuela), SAMBIL-(Venezuela),
-          Miami Viajes-(Miami), Vive La Música-(México), Aicon Elevadores-(España), Ad La Costera-(España), MGF-(Argentina)</p>
-          <p><strong>2016 Panasaurios </strong></p>
-          <p align="justify">En Panasaurios C.A. , cumplí con una de las tareas más difíciles y a su vez gratificantes, dado que 
-          los proyectos de las empresas también iban vinculados con nuestra revista de temas variados con publicación bimensual
-          , nuestra idea era conectar a las empersas con publicidad e impactar a los eventos en donde Panasaurios como medio digital
-          se abría cada vez más espacio y lograr la distrubución a nivel nacional.
-          </p>
-          <p><strong>2018/2020 Pixelteam </strong></p>
-          <p align="justify">Actualmente desempeñando como programador Full Stack y producción de desarrollo o soluciones para empresas.
-          </p>
+   </div>
+ 
+ 
+ <footer class="footer-container text-center">
+   <div class="container">
+     <div class="row">
+       <div class="col-xs-12">
+         <p>© UNTITLED | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></p>
+       </div>
      </div>
-</div>
+   </div>
+ </footer>
 {% endblock %}

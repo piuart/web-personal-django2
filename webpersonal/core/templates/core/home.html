@@ -1,32 +1,6 @@
 {% extends "core/base.html" %}
 
-{% block title %}Portada{% endblock %}
-
-{% block background %}{% load static %}{% static 'core/img/Home-bg.jpg' %}{% endblock %}
+{% block title %}Home{% endblock %}
 
 
-{% block headers %}
-   <h1>Jorge Dorta</h1>
-   <span class="subheading">Diseñador y Programador Full Stack</span>
-{% endblock %}
-
-{% block content %}
-<p align="center">Hola. Bienvenido, soy Jorge Dorta y esta es mi página web, en donde compartiré con uds mi experiencia en el mundo
-del desarrollo web y algunas aplicaciones</p>
-</br>
-<h3><p align="center">Podemos desarrollar tus Proyectos en:</p></h3>
-</br>
-<p align="center">
-</p>
-<div class="container px-lg-5" align="center">
-  <div class="row mx-lg-n5"">
-    <div class="col py-2 px-lg-1 border "><img class="img" src="{% static 'core/img/logos/logo-python.jpg' %}" alt=""></div>
-    <div class="col py-2 px-lg-1 border "><img class="img" src="{% static 'core/img/logos/logo-laravel.jpg' %}" alt=""></div>
-    <div class="col py-2 px-lg-1 border "><img class="img" src="{% static 'core/img/logos/logo-symfony.jpg' %}" alt=""></div>
-    <div class="col py-2 px-lg-1 border "><img class="img" src="{% static 'core/img/logos/logo-mysql.jpg' %}" alt=""></div> 
-    <div class="col py-2 px-lg-1 border "><img class="img" src="{% static 'core/img/logos/logo-js.jpg' %}" alt=""></div>
-    <div class="col py-2 px-lg-1 border "><img class="img" src="{% static 'core/img/logos/logo-bootstrap.jpg' %}" alt=""></div> 
-  </div>
-</div>
-</br>
-{% endblock %}
+{% block img %}{% load static %}{% static 'core/img/space.jpg' %}{% endblock %}

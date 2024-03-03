@@ -1,111 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
-  <head>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>{% block title %}{% endblock %} | JD Code</title>  
+  {% load static %}
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+  <link href="{% static 'core/img/apple-icon-180x180' %}" rel="icon">
+  <link href="{% static 'core/css/main.3f6952e4.css' %}" rel="stylesheet"></head>
 
-    <title>{% block title %}{% endblock %} | JD Code</title>
 
-    <!-- Estilos y fuentes del template  -->
-    {% load static %}
-    <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'core/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href="{% static 'core/css/clean-blog.min.css' %}" rel="stylesheet">
+  <body class="minimal">
+  <div id="site-border-left"></div>
+  <div id="site-border-right"></div>
+  <div id="site-border-top"></div>
+  <div id="site-border-bottom"></div>
 
-  </head>
+<!-- Add your content of header --> 
 
-  <body>
 
-    <!-- Navegación -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="{% url 'home' %}">JD {Code}</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menú
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'home' %}">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'about' %}">Acerca de</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'portfolio' %}">Portafolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'contact' %}">Contacto</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Cabecera -->
-    <header class="masthead" style="background-image: url('{% block background %}{% endblock %}')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              {% block headers %}{% endblock %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- Contenido -->
+<header>
+  <nav class="{% block navbar %}navbar  navbar-fixed-top navbar-inverse{% endblock %}">
     <div class="container">
-           {% block content %}{% endblock %}   
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+      <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav ">
+          <li><a href="{% url 'home' %}" title="">01 : Home</a></li>
+          <li><a href="{% url 'portfolio' %}" title="">02 : Works</a></li>
+          <li><a href="{% url 'about' %}" title="">03 : About me</a></li>
+          <li><a href="{% url 'contact' %}" title="">04 : Contact</a></li>
+        </ul>
+      </div> 
     </div>
+  </nav>
+</header>
 
 
-    {% if request.path != "/" %}<hr>{% endif %}
-    
-
-    <!-- Pié de página -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <ul class="list-inline text-center">
-              <li class="list-inline-item">
-                <a href="mailto:jorge.diazdorta@gmail.com">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="https://www.instagram.com/minimalcode.top/">
-                  <span class="fa-stack fa-lg">
-                    <i class= "fa fa-circle fa-stack-2x"></i>
-                    <i class= "fa fa-instagram fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p class="copyright text-muted">Copyright &copy; 2018 · Jorge Dorta (Diseñador y Programador Full Stack) </p>
+<!-- Add your site or app content here -->
+{% block content %}
+<div class="hero-full-container background-image-container white-text-container" style="background-image: url('{% block img %}{% endblock %}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="hero-full-wrapper">
+          <div class="text-content">
+            <h1>Hello,<br>
+              <span id="typed-strings">
+                <span>I'm Jorge Diaz</span>
+                <span>French Programmer</span>
+                <span>I work for Ivnosys Solutions</span>
+              </span>
+              <span id="typed"></span>
+            </h1>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     type();
+     movingBackgroundImage();
+  });
+</script>
 
-      
-    </footer>
 
-    <!-- Bootstrap y Javascripts -->
-    <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'core/js/clean-blog.min.js' %}"></script>
-
-  </body>
+<script type="text/javascript" src="{% static 'core/js/main.70a66962.js' %}"></script></body>
 
 </html>
